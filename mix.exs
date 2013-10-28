@@ -13,6 +13,9 @@ defmodule PressureCache.Mixfile do
   end
 
   defp deps do
-    [{ :con_cache, github: "sasa1977/con_cache" }]
+    [
+      { :exactor, github: "sasa1977/exactor" },
+      { :con_cache, github: "sasa1977/con_cache" }
+    ]
   end
 end
