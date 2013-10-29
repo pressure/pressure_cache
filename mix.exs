@@ -2,10 +2,12 @@ defmodule PressureCache.Mixfile do
   use Mix.Project
 
   def project do
-    [ app: :pressure_cache,
+    [
+      app: :pressure_cache,
       version: "0.0.1",
       elixir: "~> 0.10.3",
-      deps: deps ]
+      deps: deps
+    ]
   end
 
   def application do
