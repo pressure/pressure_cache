@@ -11,7 +11,9 @@ defmodule PressureCache.Mixfile do
   end
 
   def application do
-    [mod: { PressureCache, [] }]
+    [
+      mod: { PressureCache, [ watch_path: File.cwd! ] }
+    ]
   end
 
   defp deps do
