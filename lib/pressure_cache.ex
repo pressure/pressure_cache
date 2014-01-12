@@ -6,12 +6,12 @@ defmodule PressureCache do
   alias PressureCache.File,   as: F
   alias PressureCache.Helper, as: H
 
-  def start(_type, args) do
+  def start(_type, _args) do
     cache      = CC.start_link()
-    watch_path = H.sanitize_path(ListDict.get(args, :watch_path, File.cwd!))
-    path       = watch_path
+    watch_path = File.cwd!
     File.mkdir_p(watch_path)
-    PressureCache.Supervisor.start_link( [cache, path] )
+    IO.puts "[PressureCache] Watching files in #{watch_path} ..."
+    PressureCache.Supervisor.start_link( [cache, watch_path] )
   end
 
   def get(key),        do: C.get(key)
