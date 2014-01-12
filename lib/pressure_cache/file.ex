@@ -3,7 +3,6 @@ defmodule PressureCache.File do
 
   # Implement http://elixir-lang.org/docs/stable/File.html
 
-  alias ConCache,             as: CC
   alias PressureCache.Cache,  as: C
   alias PressureCache.Helper, as: H
 

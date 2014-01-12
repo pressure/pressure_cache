@@ -1,10 +1,7 @@
 defmodule PressureCache.Server do
   use GenServer.Behaviour
 
-  alias ConCache,             as: CC
-  alias PressureCache.Cache,  as: C
-  alias PressureCache.File,   as: F
-  alias PressureCache.Helper, as: H
+  alias ConCache, as: CC
 
   def start_link([cache, path]) do
     :gen_server.start_link({ :local, :pressure_cache }, __MODULE__, [cache, path], [])
