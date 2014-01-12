@@ -1,4 +1,4 @@
-[ "con_cache": {:git, "git://github.com/sasa1977/con_cache.git", "cab712f7d37d1b3095c29bc56fc674ae78027cd9", []},
+[ "con_cache": {:git, "git://github.com/sasa1977/con_cache.git", "5969ccf420704a32b9b43b117fcae93c2a5c7db8", []},
   "erlfsmon": {:git, "git://github.com/proger/erlfsmon.git", "12759ab5e531d89768e14078f130daf9e5969749", []},
   "erlsh": {:git, "https://github.com/proger/erlsh", "490aa8f2ce80810d7aa3c0125c9fb34706004d70", [{:ref, "HEAD"}]},
-  "exactor": {:git, "git://github.com/sasa1977/exactor.git", "3b7e81b493362d4356d25b1c22c7da8fdc8a0c2c", []} ]
+  "exactor": {:git, "git://github.com/sasa1977/exactor.git", "ee207af78849fc277b5d33edfbb493e6f369320a", []} ]
