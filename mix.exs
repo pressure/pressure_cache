@@ -3,10 +3,11 @@ defmodule PressureCache.Mixfile do
 
   def project do
     [
-      app:     :pressure_cache,
-      version: "0.1.0",
-      elixir:  "~> 0.12.0",
-      deps:    deps
+      app:                   :pressure_cache,
+      version:               "0.1.1",
+      elixir:                "~> 0.12.2",
+      build_per_environment: true,
+      deps:                  deps
     ]
   end
 
