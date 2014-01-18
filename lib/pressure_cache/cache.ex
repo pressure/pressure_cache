@@ -6,6 +6,6 @@ defmodule PressureCache.Cache do
   def cache_and_path,  do: :gen_server.call(:pressure_cache, :cache)
   def cache,           do: hd(cache_and_path)
   def path,            do: hd(Enum.reverse(cache_and_path))
-  def memory,          do: ConCache.memory(cache)
+  def info,            do: [items: :cherly.items(cache), size: :cherly.size(cache)]
 
 end

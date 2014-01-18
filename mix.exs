@@ -18,8 +18,8 @@ defmodule PressureCache.Mixfile do
 
   defp deps do
     [
-      { :con_cache, github: "sasa1977/con_cache" },
-      { :erlfsmon,  github: "proger/erlfsmon" }
+      { :cherly,   github: "leo-project/cherly" },
+      { :erlfsmon, github: "proger/erlfsmon" }
     ]
   end
 end
