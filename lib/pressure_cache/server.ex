@@ -16,7 +16,7 @@ defmodule PressureCache.Server do
 
   def handle_call({ :get, ckey }, _from, [cache, path]) do
     val = case :cherly.get(cache, :erlang.term_to_binary(ckey)) do
-      {:ok, value } -> binary_to_term(value)
+      {:ok, value } -> :erlang.binary_to_term(value)
       _             -> nil
     end
     { :reply, val, [cache, path] }
