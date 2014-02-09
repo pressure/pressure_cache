@@ -15,7 +15,7 @@ defmodule PressureCache.Server do
   end
 
   def handle_call({ :get, ckey }, _from, [cache, path]) do
-    val = case :cherly.get(cache, term_to_binary(ckey)) do
+    val = case :cherly.get(cache, :erlang.term_to_binary(ckey)) do
       {:ok, value } -> binary_to_term(value)
       _             -> nil
     end
@@ -23,12 +23,12 @@ defmodule PressureCache.Server do
   end
 
   def handle_cast({ :put, ckey, value }, [cache, path]) do
-    :cherly.put(cache, term_to_binary(ckey), term_to_binary(value))
+    :cherly.put(cache, :erlang.term_to_binary(ckey), :erlang.term_to_binary(value))
     { :noreply, [cache, path] }
   end
 
   def handle_cast({ :delete, ckey }, [cache, path]) do
-    :cherly.remove(cache, term_to_binary(ckey))
+    :cherly.remove(cache, :erlang.term_to_binary(ckey))
     { :noreply, [cache, path] }
   end
 
