@@ -4,8 +4,8 @@ defmodule PressureCache.Mixfile do
   def project do
     [
       app:                   :pressure_cache,
-      version:               "0.1.1",
-      elixir:                "~> 0.12.2",
+      version:               "0.1.2",
+      elixir:                "~> 0.12.3",
       build_per_environment: true,
       deps:                  deps
     ]
